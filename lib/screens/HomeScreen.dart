@@ -1,6 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_playground/Screens/Home/CameraScreen.dart';
+import 'package:flutter_playground/screens/CameraScreen.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {

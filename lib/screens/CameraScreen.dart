@@ -37,6 +37,13 @@ class _CameraScreenState extends State<CameraScreen> {
         ),
       ),
       body: MaterialApp(home: CameraPreview(controller)),
+      floatingActionButton: FloatingActionButton(
+        child: Text('Shoot'),
+        onPressed: () async {
+          final image = await controller.takePicture();
+          print(image);
+        },
+      ),
     );
   }
 }
