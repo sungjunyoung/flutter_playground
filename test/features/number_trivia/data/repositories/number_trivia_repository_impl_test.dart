@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_playground/core/error/exceptions.dart';
 import 'package:flutter_playground/core/error/failures.dart';
-import 'package:flutter_playground/core/platform/netfork_info.dart';
+import 'package:flutter_playground/core/network/netfork_info.dart';
 import 'package:flutter_playground/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:flutter_playground/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
 import 'package:flutter_playground/features/number_trivia/data/models/number_trivia_model.dart';
@@ -13,8 +13,7 @@ import 'package:mocktail/mocktail.dart';
 class MockRemoteDataSource extends Mock
     implements NumberTriviaRemoteDataSource {}
 
-class MockLocalDataSource extends Mock implements NumberTriviaLocalDataSource {
-}
+class MockLocalDataSource extends Mock implements NumberTriviaLocalDataSource {}
 
 class MockNetworkInfo extends Mock implements NetworkInfo {}
 

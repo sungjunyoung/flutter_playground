@@ -1,9 +1,10 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_playground/core/error/exceptions.dart';
 import 'package:flutter_playground/core/error/failures.dart';
-import 'package:flutter_playground/core/platform/netfork_info.dart';
+import 'package:flutter_playground/core/network/netfork_info.dart';
 import 'package:flutter_playground/features/number_trivia/data/datasources/number_trivia_local_data_source.dart';
 import 'package:flutter_playground/features/number_trivia/data/datasources/number_trivia_remote_data_source.dart';
+import 'package:flutter_playground/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:flutter_playground/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:flutter_playground/features/number_trivia/domain/repositories/number_trivia_repository.dart';
 
@@ -32,7 +33,7 @@ class NumberTriviaRepositoryImpl implements NumberTriviaRepository {
   }
 
   Future<Either<Failure, NumberTrivia>> _getTrivia(
-    Future<NumberTrivia> Function() getConcreteOrRandom,
+    Future<NumberTriviaModel> Function() getConcreteOrRandom,
   ) async {
     if (await networkInfo.isConnected()) {
       try {
