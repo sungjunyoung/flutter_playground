@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/HomeScreen.dart';
 import 'package:get/get.dart';
+import 'injection_container.dart' as di;
 
-void main() async {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
   runApp(MyApp());
 }
 

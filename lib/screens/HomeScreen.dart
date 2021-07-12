@@ -1,5 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_playground/features/number_trivia/presentation/pages/number_trivia_page.dart';
 import 'package:flutter_playground/screens/CameraScreen.dart';
 import 'package:get/get.dart';
 
@@ -10,15 +12,21 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.all(8),
+      padding: EdgeInsets.all(12),
       children: <Widget>[
-        CupertinoButton.filled(
+        TextButton(
           child: Text('카메라 테스트'),
           onPressed: () async {
             var cameras = await availableCameras();
             Get.to(() => CameraScreen(), arguments: cameras);
           },
-        )
+        ),
+        TextButton(
+          child: Text('TDD Clean Architecture'),
+          onPressed: () async {
+            Get.to(() => NumberTriviaPage());
+          },
+        ),
       ],
     );
   }

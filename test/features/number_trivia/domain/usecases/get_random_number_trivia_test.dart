@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:flutter_playground/core/usecases/usecase.dart';
 import 'package:flutter_playground/features/number_trivia/domain/entities/number_trivia.dart';

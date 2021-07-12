@@ -6,7 +6,7 @@ import 'package:flutter_playground/features/number_trivia/domain/entities/number
 import 'package:flutter_playground/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:flutter_playground/features/number_trivia/domain/usecases/get_random_number_trivia.dart';
 import 'package:flutter_playground/features/number_trivia/presentation/bloc/number_trivia_bloc.dart';
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockGetConcreteNumberTrivia extends Mock
