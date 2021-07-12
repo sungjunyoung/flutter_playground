@@ -51,7 +51,7 @@ void main() {
         NumberTriviaModel(text: 'Test trivia', number: 1);
 
     test('should call SharedPreferences to cache the data', () async {
-      // arrang
+      // arrange
       when(() => mockSharedPreferences.setString(CACHED_NUMBER_TRIVIA, any()))
           .thenAnswer((_) async => true);
       // act
