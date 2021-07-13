@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/features/number_trivia/presentation/pages/number_trivia_page.dart';
 import 'package:flutter_playground/screens/camera_screen.dart';
+import 'package:flutter_playground/screens/travel_screen.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.all(12),
       children: <Widget>[
         TextButton(
-          child: Text('카메라 테스트'),
+          child: Text('Camera Test'),
           onPressed: () async {
             var cameras = await availableCameras();
             Get.to(() => CameraScreen(), arguments: cameras);
@@ -25,6 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Text('TDD Clean Architecture'),
           onPressed: () async {
             Get.to(() => NumberTriviaPage());
+          },
+        ),
+        TextButton(
+          child: Text('Travel UI Application'),
+          onPressed: () async {
+            Get.to(() => TravelScreen());
           },
         ),
       ],

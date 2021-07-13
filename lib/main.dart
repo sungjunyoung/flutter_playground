@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Startup Name Generator',
-      darkTheme: ThemeData.dark(),
+      darkTheme: ThemeData(
+          accentColor: Color(0xFFD8ECF1),
+          scaffoldBackgroundColor: Color(0xFFF3F5F7)),
       home: Scaffold(
           appBar: AppBar(
             title: Text('Flutter Playground'),
